@@ -19,7 +19,7 @@ public class BetTest {
     @Before
     public void before(){
 
-        bet = new Bet("Football", "Arsenal to win league", new Date(117,9,10), 25);
+        bet = new Bet("Football", "Arsenal to win league", new Date(117,9,10), new Date(), 25);
 
     }
 
@@ -36,6 +36,11 @@ public class BetTest {
     @Test
     public void hasResolvedOn(){
         assertEquals("10/10/2017", bet.getNiceDateFormat());
+    }
+
+    @Test
+    public void hasBetPlacedOn(){
+        assertEquals(new Date(), bet.getBetPlacedOn());
     }
 
     @Test

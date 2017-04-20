@@ -12,12 +12,14 @@ public class Bet {
     private String category;
     private String details;
     private Date resolvedOn;
+    private Date betPlacedOn;
     private int stake;
 
-    public Bet (String category, String details, Date resolvedOn, Integer stake){
+    public Bet (String category, String details, Date resolvedOn, Date betPlacedOn, Integer stake){
         this.category = category;
         this.details = details;
         this.resolvedOn = resolvedOn;
+        this.betPlacedOn = betPlacedOn;
         this.stake = stake;
     }
 
@@ -36,6 +38,10 @@ public class Bet {
     public String getNiceDateFormat() {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
         return simpleDateFormat.format(resolvedOn);
+    }
+
+    public Date getBetPlacedOn(){
+        return betPlacedOn;
     }
 
     public Integer getStake(){
