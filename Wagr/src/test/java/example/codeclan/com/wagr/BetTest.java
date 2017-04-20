@@ -3,6 +3,9 @@ package example.codeclan.com.wagr;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Calendar;
+import java.util.Date;
+
 import static junit.framework.Assert.assertEquals;
 
 /**
@@ -16,8 +19,8 @@ public class BetTest {
     @Before
     public void before(){
 
-        bet = new Bet("Football", "Arsenal to win league", "31st May 2017", 25);
-//        will come back to this at a later point, date currently a string
+        bet = new Bet("Football", "Arsenal to win league", new Date(117,9,10), 25);
+
     }
 
     @Test
@@ -32,7 +35,7 @@ public class BetTest {
 
     @Test
     public void hasResolvedOn(){
-        assertEquals("31st May 2017", bet.getResolvedOn());
+        assertEquals("10/10/2017", bet.getNiceDateFormat());
     }
 
     @Test
