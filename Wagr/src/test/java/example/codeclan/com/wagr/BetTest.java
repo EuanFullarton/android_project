@@ -3,7 +3,6 @@ package example.codeclan.com.wagr;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.Calendar;
 import java.util.Date;
 
 import static junit.framework.Assert.assertEquals;
