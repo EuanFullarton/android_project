@@ -17,9 +17,7 @@ public class BetTest {
 
     @Before
     public void before(){
-
         bet = new Bet("Football", "Arsenal to win league", new Date(117,9,10), new Date(), 25);
-
     }
 
     @Test
