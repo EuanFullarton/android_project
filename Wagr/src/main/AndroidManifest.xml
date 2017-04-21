@@ -16,7 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ResolvedBetsActivity" />
-        <activity android:name=".UsersActivity" />
+        <activity android:name=".UserListActivity" />
         <activity android:name=".NewBetActivity"></activity>
     </application>
 

@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void usersButtonClicked(View button){
 
-        Intent intent = new Intent(this, UsersActivity.class);
+        Intent intent = new Intent(this, UserListActivity.class);
         startActivity(intent);
     }
 
