@@ -1,5 +1,6 @@
 package example.codeclan.com.wagr;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -27,5 +28,11 @@ public class UserListActivity extends AppCompatActivity {
     public void getUser(View listItem) {
         User user = (User) listItem.getTag();
         Log.d("Name: ", user.getName());
+    }
+
+    public void addNewUserButtonClicked(View button){
+
+        Intent intent = new Intent(this, NewUserActivity.class);
+        startActivity(intent);
     }
 }

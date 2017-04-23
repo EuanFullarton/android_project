@@ -17,7 +17,8 @@
         </activity>
         <activity android:name=".ResolvedBetsActivity" />
         <activity android:name=".UserListActivity" />
-        <activity android:name=".NewBetActivity"></activity>
+        <activity android:name=".NewBetActivity" />
+        <activity android:name=".NewUserActivity"></activity>
     </application>
 
 </manifest>
