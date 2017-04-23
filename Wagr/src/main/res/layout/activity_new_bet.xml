@@ -40,6 +40,7 @@
     <Button
         android:id="@+id/submit_new_bet_button"
         android:text="Create new bet"
+        android:onClick="submitNewBetButtonClicked"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
