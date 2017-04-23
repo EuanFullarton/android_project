@@ -21,8 +21,9 @@ public class UserList {
         return new ArrayList<User>(list);
     }
 
-    public void addNewUser(String name){
-        list.add(new User(name));
+    public ArrayList<User> addNewUser(User new_user){
+        list.add(new_user);
+        return new ArrayList<User>(list);
     }
 
 
