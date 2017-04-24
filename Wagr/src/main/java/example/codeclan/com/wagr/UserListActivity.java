@@ -20,7 +20,7 @@ public class UserListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_users);
 
         UserList userList = new UserList();
-        ArrayList<User> list = userList.getList();
+        ArrayList<User> list = userList.getUserList();
 
         UserListAdapter userListAdapter = new UserListAdapter(this, list);
 

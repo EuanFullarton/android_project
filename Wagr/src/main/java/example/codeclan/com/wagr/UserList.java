@@ -14,10 +14,13 @@ public class UserList {
     private ArrayList<User> list;
 
     public UserList(){
+
         list = new ArrayList<User>();
+        list.add(new User("Euan"));
+
     }
 
-    public ArrayList<User> getList(){
+    public ArrayList<User> getUserList(){
         return new ArrayList<User>(list);
     }
 
