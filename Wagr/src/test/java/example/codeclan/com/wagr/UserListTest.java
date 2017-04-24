@@ -20,8 +20,13 @@ public class UserListTest {
 
     @Test
     public void getUserListTest(){
-        UserList userList = new UserList();
         assertEquals(1, userList.getUserList().size());
+    }
+
+    @Test
+    public void addNewUserTest(){
+        userList.addNewUser("Jim");
+        assertEquals(2, userList.getUserList().size());
     }
 
 }

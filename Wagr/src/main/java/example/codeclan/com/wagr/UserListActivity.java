@@ -13,7 +13,6 @@ import static android.R.id.list;
 
 public class UserListActivity extends AppCompatActivity {
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +25,14 @@ public class UserListActivity extends AppCompatActivity {
 
         ListView listView = (ListView) findViewById(R.id.user_list);
         listView.setAdapter(userListAdapter);
+
+        Intent intent = getIntent();
+        Bundle extras = intent.getExtras();
+
+        if(extras != null) {
+            String user_name = extras.getString("name");
+            userList.addNewUser(user_name);
+        }
     }
 
     public void getUser(View listItem) {
@@ -38,4 +45,5 @@ public class UserListActivity extends AppCompatActivity {
         Intent intent = new Intent(this, NewUserActivity.class);
         startActivity(intent);
     }
+
 }
