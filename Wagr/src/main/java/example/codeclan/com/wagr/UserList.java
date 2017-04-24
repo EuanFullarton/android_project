@@ -13,7 +13,6 @@ public class UserList {
     public UserList(){
 
         list = new ArrayList<User>();
-        list.add(new User(1, "Euan"));
 
     }
 

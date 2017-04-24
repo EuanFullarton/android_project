@@ -13,9 +13,12 @@ public class UserListTest {
 
     UserList userList;
 
+
     @Before
     public void before(){
         userList = new UserList();
+        userList.addNewUser(1, "Euan");
+
     }
 
     @Test

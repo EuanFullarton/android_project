@@ -14,7 +14,7 @@ import java.util.ArrayList;
  * Created by user on 24/04/2017.
  */
 
-public class DatabaseHandler extends SQLiteOpenHelper {
+public class UserDatabaseHandler extends SQLiteOpenHelper {
 
     private static final int DATABASE_VERSION = 10;
     private static final String DATABASE_NAME = "UserListDB";
@@ -23,7 +23,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     private static final String KEY_ID = "id";
     private static final String KEY_NAME = "name";
 
-    public DatabaseHandler(Context context){
+    public UserDatabaseHandler(Context context){
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
