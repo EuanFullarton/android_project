@@ -15,7 +15,12 @@ public class UserTest {
 
     @Before
     public void before() {
-        user = new User("Euan");
+        user = new User(1, "Euan");
+    }
+
+    @Test
+    public void hasId(){
+        assertEquals(1, user.getId());
     }
 
     @Test

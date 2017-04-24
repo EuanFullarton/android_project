@@ -1,8 +1,5 @@
 package example.codeclan.com.wagr;
 
-import android.content.Intent;
-import android.view.View;
-
 import java.util.ArrayList;
 
 /**
