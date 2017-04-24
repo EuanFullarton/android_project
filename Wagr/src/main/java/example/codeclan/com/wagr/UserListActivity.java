@@ -11,24 +11,53 @@ import android.widget.ListView;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static android.R.id.list;
 
 public class UserListActivity extends AppCompatActivity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_users);
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_users);
+//
+//        UserList userList = new UserList();
+//        ArrayList<User> list = userList.getUserList();
+//
+//        UserListAdapter userListAdapter = new UserListAdapter(this, list);
+//
+//        ListView listView = (ListView) findViewById(R.id.user_list);
+//        listView.setAdapter(userListAdapter);
+//    }
 
-        UserList userList = new UserList();
-        ArrayList<User> list = userList.getUserList();
+        @Override
+        public void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_users);
 
-        UserListAdapter userListAdapter = new UserListAdapter(this, list);
+            DatabaseHandler db = new DatabaseHandler(this);
 
-        ListView listView = (ListView) findViewById(R.id.user_list);
-        listView.setAdapter(userListAdapter);
-    }
+            /**
+             * CRUD Operations
+             * */
+            // Inserting Contacts
+            Log.d("Insert: ", "Inserting ..");
+            db.addUser(new User("Ravi"));
+            db.addUser(new User("Srinivas"));
+            db.addUser(new User("Tommy"));
+            db.addUser(new User("Karthik"));
+
+            // Reading all contacts
+            Log.d("Reading: ", "Reading all contacts..");
+            List<User> users = db.getAllUsers();
+
+            for (User ur : users) {
+                String log = "Id: "+ur.getId()+" ,Name: " + ur.getName();
+                // Writing Contacts to log
+                Log.d("Name: ", log);
+            }
+        }
 
     public void onResume() {
         super.onResume();
@@ -37,15 +66,14 @@ public class UserListActivity extends AppCompatActivity {
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
 
-        if(extras != null) {
-            String user_name = extras.getString("name");
-            userList.addNewUser(user_name);
-            ArrayList<User> list = userList.getUserList();
-            UserListAdapter userListAdapter = new UserListAdapter(this, list);
-            ListView listView = (ListView) findViewById(R.id.user_list);
-            listView.setAdapter(userListAdapter);
+//        if(extras != null) {
+//            String user_name = extras.getString("name");
+//            userList.addNewUser(user_name);
+//            ArrayList<User> list = userList.getUserList();
+//            UserListAdapter userListAdapter = new UserListAdapter(this, list);
+//            ListView listView = (ListView) findViewById(R.id.user_list);
+//            listView.setAdapter(userListAdapter);
         }
-    }
 
     public void getUser(View listItem) {
         User user = (User) listItem.getTag();

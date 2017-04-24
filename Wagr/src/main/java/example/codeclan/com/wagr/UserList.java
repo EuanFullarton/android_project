@@ -13,7 +13,7 @@ public class UserList {
     public UserList(){
 
         list = new ArrayList<User>();
-        list.add(new User("Euan"));
+        list.add(new User(1, "Euan"));
 
     }
 
@@ -21,8 +21,8 @@ public class UserList {
         return new ArrayList<User>(list);
     }
 
-    public ArrayList<User> addNewUser(String new_user_name){
-        User new_user = new User(new_user_name);
+    public ArrayList<User> addNewUser(int id, String new_user_name){
+        User new_user = new User(id, new_user_name);
         list.add(new_user);
         return new ArrayList<User>(list);
     }

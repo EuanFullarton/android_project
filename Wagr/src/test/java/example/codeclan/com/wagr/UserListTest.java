@@ -25,7 +25,7 @@ public class UserListTest {
 
     @Test
     public void addNewUserTest(){
-        userList.addNewUser("Jim");
+        userList.addNewUser(2, "Jim");
         assertEquals(2, userList.getUserList().size());
     }
 
