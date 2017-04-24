@@ -9,6 +9,8 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class NewUserActivity extends AppCompatActivity {
 
     EditText newUser;
@@ -22,15 +24,14 @@ public class NewUserActivity extends AppCompatActivity {
 
     public void submitNewUserButtonClicked(View button){
         newUser = (EditText)findViewById(R.id.new_user_name);
-//        userList = (ListView)findViewById(R.id.user_list);
 
         String user_name = newUser.getText().toString();
+        User new_user = new User(user_name);
 
-//        userList.setText(newUser);
-//        SavedUserPreferences.setStoredText(this, newUser);
+        DatabaseHandler db = new DatabaseHandler(this);
+        db.addUser(new_user);
 
         Intent intent = new Intent(this, UserListActivity.class);
-        intent.putExtra("name", user_name);
         startActivity(intent);
 
     }

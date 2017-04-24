@@ -43,10 +43,7 @@ public class UserListActivity extends AppCompatActivity {
              * */
             // Inserting Contacts
             Log.d("Insert: ", "Inserting ..");
-            db.addUser(new User("Euan"));
-            db.addUser(new User("Jim"));
-            db.addUser(new User("Percy"));
-            db.addUser(new User("Fred"));
+
 
             // Reading all contacts
             Log.d("Reading: ", "Reading all contacts..");
@@ -64,12 +61,12 @@ public class UserListActivity extends AppCompatActivity {
             listView.setAdapter(userListAdapter);
         }
 
-    public void onResume() {
-        super.onResume();
-        UserList userList = new UserList();
-
-        Intent intent = getIntent();
-        Bundle extras = intent.getExtras();
+//    public void onResume() {
+//        super.onResume();
+//        UserList userList = new UserList();
+//
+//        Intent intent = getIntent();
+//        Bundle extras = intent.getExtras();
 
 //        if(extras != null) {
 //            String user_name = extras.getString("name");
@@ -78,7 +75,7 @@ public class UserListActivity extends AppCompatActivity {
 //            UserListAdapter userListAdapter = new UserListAdapter(this, list);
 //            ListView listView = (ListView) findViewById(R.id.user_list);
 //            listView.setAdapter(userListAdapter);
-        }
+//        }
 
     public void getUser(View listItem) {
         User user = (User) listItem.getTag();

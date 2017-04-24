@@ -5,9 +5,9 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import java.util.ArrayList;
-import java.util.List;
 
 
 /**
@@ -16,7 +16,7 @@ import java.util.List;
 
 public class DatabaseHandler extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 10;
     private static final String DATABASE_NAME = "UserListDB";
     private static final String TABLE_USERS = "users";
 
@@ -29,9 +29,11 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_USERS);
         String CREATE_USERS_TABLE = "CREATE TABLE " + TABLE_USERS + "("
                 + KEY_ID + " INTEGER PRIMARY KEY," + KEY_NAME + ")";
         db.execSQL(CREATE_USERS_TABLE);
+
     }
 
     @Override
@@ -97,6 +99,14 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(TABLE_USERS, KEY_ID + " = ?",
                 new String[] { String.valueOf(user.getId()) });
+        db.close();
+    }
+
+    public void deleteAllUsers(){
+        ArrayList<User> userList = new ArrayList<User>();
+        String deleteQuery = "DELETE FROM " + TABLE_USERS;
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.execSQL(deleteQuery);
         db.close();
     }
 
