@@ -64,8 +64,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return user;
     }
 
-    public List<User> getAllUsers(){
-        List<User> userList = new ArrayList<User>();
+    public ArrayList<User> getAllUsers(){
+        ArrayList<User> userList = new ArrayList<User>();
         String selectQuery = "SELECT  * FROM " + TABLE_USERS;
 
         SQLiteDatabase db = this.getWritableDatabase();

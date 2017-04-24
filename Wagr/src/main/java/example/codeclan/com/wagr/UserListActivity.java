@@ -43,20 +43,25 @@ public class UserListActivity extends AppCompatActivity {
              * */
             // Inserting Contacts
             Log.d("Insert: ", "Inserting ..");
-            db.addUser(new User("Ravi"));
-            db.addUser(new User("Srinivas"));
-            db.addUser(new User("Tommy"));
-            db.addUser(new User("Karthik"));
+            db.addUser(new User("Euan"));
+            db.addUser(new User("Jim"));
+            db.addUser(new User("Percy"));
+            db.addUser(new User("Fred"));
 
             // Reading all contacts
             Log.d("Reading: ", "Reading all contacts..");
-            List<User> users = db.getAllUsers();
+            ArrayList<User> users = db.getAllUsers();
 
             for (User ur : users) {
                 String log = "Id: "+ur.getId()+" ,Name: " + ur.getName();
                 // Writing Contacts to log
                 Log.d("Name: ", log);
             }
+
+            UserListAdapter userListAdapter = new UserListAdapter(this, users);
+
+            ListView listView = (ListView) findViewById(R.id.user_list);
+            listView.setAdapter(userListAdapter);
         }
 
     public void onResume() {
