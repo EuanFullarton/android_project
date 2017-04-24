@@ -4,8 +4,11 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 
 public class NewUserActivity extends AppCompatActivity {
+
+    EditText newUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,9 +17,9 @@ public class NewUserActivity extends AppCompatActivity {
     }
 
     public void submitNewUserButtonClicked(View button){
-        //TODO find out how to pass the below value to the UserList ArrayList.
+        newUser = (EditText)findViewById(R.id.new_user_name);
 
-        String user_name = findViewById(R.id.new_user_name).toString();
+        String user_name = newUser.getText().toString();
 
         Intent intent = new Intent(this, UserListActivity.class);
         intent.putExtra("name", user_name);
