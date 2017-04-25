@@ -65,6 +65,11 @@ public class Bet {
         return simpleDateFormat.format(resolvedOn);
     }
 
+    public String getNiceDateFormat(Date date) {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        return simpleDateFormat.format(date);
+    }
+
     public Date getBetPlacedOn(){
         return betPlacedOn;
     }

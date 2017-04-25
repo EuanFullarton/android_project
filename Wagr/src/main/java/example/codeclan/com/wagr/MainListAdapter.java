@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -40,10 +42,10 @@ public class MainListAdapter extends ArrayAdapter<Bet> {
             details.setText(currentBet.getDetails());
 
             TextView resolvedOn = (TextView) listItemView.findViewById(R.id.resolvedOn);
-            resolvedOn.setText(currentBet.getResolvedOn().toString());
+            resolvedOn.setText(currentBet.getNiceDateFormat(currentBet.getResolvedOn()));
 
             TextView betPlacedOn = (TextView) listItemView.findViewById(R.id.betPlacedOn);
-            betPlacedOn.setText(currentBet.getBetPlacedOn().toString());
+            betPlacedOn.setText(currentBet.getNiceDateFormat());
 
             TextView stake = (TextView) listItemView.findViewById(R.id.stake);
             stake.setText(currentBet.getStake().toString());

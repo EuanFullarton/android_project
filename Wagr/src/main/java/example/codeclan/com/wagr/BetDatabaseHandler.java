@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -96,6 +97,7 @@ public class BetDatabaseHandler extends SQLiteOpenHelper {
             do {
                 Date date = new Date(cursor.getString(4));
                 Date date2 = new Date(cursor.getString(5));
+                
                 Bet bet = new Bet();
                 bet.setId(Integer.parseInt(cursor.getString(0)));
                 bet.setUser1(cursor.getString(1));
