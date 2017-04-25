@@ -4,11 +4,15 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.CalendarView;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -33,7 +37,7 @@ public class NewBetActivity extends AppCompatActivity {
         newDetails = (EditText)findViewById(R.id.input_bet_details);
         newResolvedOn = (CalendarView) findViewById(R.id.input_resolution_date);
         newStake = (EditText)findViewById(R.id.input_stake);
-        
+
         String user1 = newUser1.getSelectedItem().toString();
         String user2 = newUser2.getSelectedItem().toString();
         String details = newDetails.getText().toString();
@@ -49,4 +53,7 @@ public class NewBetActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
+
+
 }
+

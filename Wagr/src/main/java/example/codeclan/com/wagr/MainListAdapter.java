@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
-
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -30,6 +29,7 @@ public class MainListAdapter extends ArrayAdapter<Bet> {
 
             Bet currentBet = getItem(position);
 
+
             TextView user1 = (TextView) listItemView.findViewById(R.id.user1);
             user1.setText(currentBet.getUser1());
 
@@ -46,7 +46,8 @@ public class MainListAdapter extends ArrayAdapter<Bet> {
             betPlacedOn.setText(currentBet.getBetPlacedOn().toString());
 
             TextView stake = (TextView) listItemView.findViewById(R.id.stake);
-            stake.setText(currentBet.getStake());
+            stake.setText(currentBet.getStake().toString());
+
 
             listItemView.setTag(currentBet);
 

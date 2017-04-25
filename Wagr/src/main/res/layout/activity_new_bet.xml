@@ -53,7 +53,8 @@
         android:layout_alignTop="@+id/select_user_2"
         android:layout_alignRight="@+id/select_user1_header"
         android:layout_alignEnd="@+id/select_user1_header"
-        android:prompt="@string/select_user">
+        android:prompt="@string/select_user"
+        android:entries="@array/user_array">
     </Spinner>
 
     <TextView
@@ -83,7 +84,10 @@
         android:layout_marginTop="26dp"
         android:layout_below="@+id/select_user2_header"
         android:layout_alignLeft="@+id/select_user2_header"
-        android:layout_alignStart="@+id/select_user2_header"></Spinner>
+        android:layout_alignStart="@+id/select_user2_header"
+        android:prompt="@string/select_user"
+        android:entries="@array/user_array">
+    </Spinner>
 
     <EditText
         android:id="@+id/input_stake"

@@ -4,89 +4,12 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/betPlacedOn"
-        android:inputType="date"
-        android:text="02/02/17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="25dp"
-        android:textAlignment="center"
-        android:textColor="#000dff"
-        android:onClick="getUser"
-        android:layout_alignRight="@+id/details"
-        android:layout_alignEnd="@+id/details"
-        android:layout_alignTop="@+id/resolvedOn" />
-
-    <CalendarView
-        android:id="@+id/resolvedOn"
-        android:inputType="date"
-        android:text="02/02/18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="25dp"
-        android:textAlignment="center"
-        android:textColor="#000dff"
-        android:onClick="getUser"
-        android:layout_marginTop="147dp"
-        android:layout_below="@+id/stake"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="54dp"
-        android:layout_marginEnd="54dp" />
-
-    <TextView
-        android:id="@+id/details"
-        android:text="details"
-        android:layout_width="108dp"
-        android:layout_height="wrap_content"
-        android:textSize="25dp"
-        android:textAlignment="center"
-        android:textColor="#000dff"
-        android:onClick="getUser"
-        android:layout_marginTop="120dp"
-        android:layout_marginLeft="37dp"
-        android:layout_marginStart="37dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:id="@+id/user1"
-        android:text="User1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="25dp"
-        android:textAlignment="center"
-        android:textColor="#000dff"
-        android:onClick="getUser"
-        android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/betPlacedOn"
-        android:layout_alignStart="@+id/betPlacedOn"
-        android:layout_marginLeft="19dp"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="27dp" />
-
-    <TextView
-        android:id="@+id/user2"
-        android:text="User2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="25dp"
-        android:textAlignment="center"
-        android:textColor="#000dff"
-        android:onClick="getUser"
-        android:layout_alignBaseline="@+id/user1"
-        android:layout_alignBottom="@+id/user1"
-        android:layout_alignRight="@+id/resolvedOn"
-        android:layout_alignEnd="@+id/resolvedOn" />
-
-    <TextView
         android:id="@+id/stake"
         android:text="5000"
         android:inputType="number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="25dp"
+        android:textSize="15dp"
         android:textAlignment="center"
         android:textColor="#000dff"
         android:onClick="getUser"
@@ -94,6 +17,102 @@
         android:layout_alignBottom="@+id/details"
         android:layout_alignRight="@+id/user2"
         android:layout_alignEnd="@+id/user2" />
+
+    <TextView
+        android:id="@+id/resolvedOn"
+        android:inputType="date"
+        android:text="02/02/18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:textAlignment="center"
+        android:textColor="#000dff"
+        android:onClick="getUser"
+        android:layout_alignTop="@+id/betPlacedOn"
+        android:layout_alignRight="@+id/stake"
+        android:layout_alignEnd="@+id/stake" />
+
+    <TextView
+        android:id="@+id/user2"
+        android:text="User2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:textAlignment="center"
+        android:textColor="#000dff"
+        android:onClick="getUser"
+        android:layout_marginRight="45dp"
+        android:layout_marginEnd="45dp"
+        android:layout_alignBaseline="@+id/user1"
+        android:layout_alignBottom="@+id/user1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/user1"
+        android:text="User1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:textAlignment="center"
+        android:textColor="#000dff"
+        android:onClick="getUser"
+        android:layout_marginTop="32dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="42dp"
+        android:layout_marginStart="42dp" />
+
+    <TextView
+        android:id="@+id/betPlacedOn"
+        android:inputType="date"
+        android:text="02/02/17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        android:textAlignment="center"
+        android:textColor="#000dff"
+        android:onClick="getUser"
+        android:layout_marginTop="97dp"
+        android:layout_below="@+id/stake"
+        android:layout_alignRight="@+id/user1"
+        android:layout_alignEnd="@+id/user1" />
+
+    <TextView
+        android:id="@+id/details"
+        android:text="details"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:textAlignment="center"
+        android:textColor="#ff0019"
+        android:onClick="getUser"
+        android:layout_marginTop="69dp"
+        android:layout_below="@+id/user1"
+        android:layout_toRightOf="@+id/user1"
+        android:layout_toEndOf="@+id/user1" />
+
+    <TextView
+        android:id="@+id/betResolvedOn_header"
+        android:text="Bet deadline:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="8dp"
+        android:layout_above="@+id/resolvedOn"
+        android:layout_alignLeft="@+id/resolvedOn"
+        android:layout_alignStart="@+id/resolvedOn" />
+
+    <TextView
+        android:id="@+id/betPlacedOn_header"
+        android:text="Bet placed on:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="8dp"
+        android:layout_alignBaseline="@+id/betResolvedOn_header"
+        android:layout_alignBottom="@+id/betResolvedOn_header"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 
 </RelativeLayout>

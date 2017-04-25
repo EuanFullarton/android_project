@@ -33,12 +33,7 @@ public class MainActivity extends AppCompatActivity {
             String log = "Id: " + bt.getId() + " ,User1: " + bt.getUser1() + " ,User2: " + bt.getUser2() + " ,Details: " + bt.getDetails() + " ,Resolved On: " + bt.getResolvedOn() +
                     " ,Placed On: " + bt.getBetPlacedOn() + " ,Stake: " + bt.getStake();
             // Writing Bets to log
-            Log.d("User1: ", log);
-            Log.d("User2: ", log);
-            Log.d("Details: ", log);
-            Log.d("Resolved On: ", log);
-            Log.d("Placed On: ", log);
-            Log.d("Stake: ", log);
+            Log.d("Bet: ", log);
         }
 
         MainListAdapter mainListAdapter = new MainListAdapter(this, bets);
