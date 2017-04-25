@@ -17,7 +17,17 @@ public class BetTest {
 
     @Before
     public void before(){
-        bet = new Bet(1, "Arsenal to win league", new Date(117,9,10), new Date(), 25);
+        bet = new Bet(1, "Euan", "Greig", "Arsenal to win league", new Date(117,9,10), new Date(), 25);
+    }
+
+    @Test
+    public void hasUser1(){
+        assertEquals("Euan", bet.getUser1());
+    }
+
+    @Test
+    public void hasUser2(){
+        assertEquals("Greig", bet.getUser2());
     }
 
     @Test
@@ -49,6 +59,18 @@ public class BetTest {
     public void testSetId(){
         bet.setId(2);
         assertEquals(2, bet.getId());
+    }
+
+    @Test
+    public void testSetUser1(){
+        bet.setUser1("Percy");
+        assertEquals("Percy", bet.getUser1());
+    }
+
+    @Test
+    public void testSetUser2(){
+        bet.setUser2("Jim");
+        assertEquals("Jim", bet.getUser2());
     }
 
     @Test

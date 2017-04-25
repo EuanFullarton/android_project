@@ -10,6 +10,8 @@ import java.util.Date;
 public class Bet {
 
     private int id;
+    private String user1;
+    private String user2;
     private String details;
     private Date resolvedOn;
     private Date betPlacedOn;
@@ -19,15 +21,19 @@ public class Bet {
 
     }
 
-    public Bet (String details, Date resolvedOn, Date betPlacedOn, Integer stake){
+    public Bet (String user1, String user2, String details, Date resolvedOn, Date betPlacedOn, Integer stake){
+        this.user1 = user1;
+        this.user2 = user2;
         this.details = details;
         this.resolvedOn = resolvedOn;
         this.betPlacedOn = betPlacedOn;
         this.stake = stake;
     }
 
-    public Bet (int id, String details, Date resolvedOn, Date betPlacedOn, int stake){
+    public Bet (int id, String user1, String user2, String details, Date resolvedOn, Date betPlacedOn, int stake){
         this.id = id;
+        this.user1 = user1;
+        this.user2 = user2;
         this.details = details;
         this.resolvedOn = resolvedOn;
         this.betPlacedOn = betPlacedOn;
@@ -36,6 +42,14 @@ public class Bet {
 
     public int getId(){
         return id;
+    }
+
+    public String getUser1(){
+        return user1;
+    }
+
+    public String getUser2(){
+        return user2;
     }
 
     public String getDetails(){
@@ -63,8 +77,24 @@ public class Bet {
         this.id = id;
     }
 
+    public void setUser1(String user1){
+        this.user1 = user1;
+    }
+
+    public void setUser2(String user2){
+        this.user2 = user2;
+    }
+
     public void setDetails(String details){
         this.details = details;
+    }
+
+    public void setResolvedOn(Date resolvedOn){
+        this.resolvedOn = resolvedOn;
+    }
+
+    public void setBetPlacedOn(Date betPlacedOn){
+        this.betPlacedOn = betPlacedOn;
     }
 
     public void setStake(int stake){

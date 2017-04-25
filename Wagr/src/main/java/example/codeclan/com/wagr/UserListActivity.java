@@ -21,17 +21,17 @@ public class UserListActivity extends AppCompatActivity {
             /**
              * CRUD Operations
              * */
-            // Inserting Contacts
+            // Inserting Users
             Log.d("Insert: ", "Inserting ..");
 
 
-            // Reading all contacts
-            Log.d("Reading: ", "Reading all contacts..");
+            // Reading all Users
+            Log.d("Reading: ", "Reading all users..");
             ArrayList<User> users = db.getAllUsers();
 
             for (User ur : users) {
                 String log = "Id: "+ur.getId()+" ,Name: " + ur.getName();
-                // Writing Contacts to log
+                // Writing Users to log
                 Log.d("Name: ", log);
             }
 
