@@ -9,16 +9,33 @@ import java.util.Date;
 
 public class Bet {
 
+    private int id;
     private String details;
     private Date resolvedOn;
     private Date betPlacedOn;
     private int stake;
+
+    public Bet(){
+
+    }
 
     public Bet (String details, Date resolvedOn, Date betPlacedOn, Integer stake){
         this.details = details;
         this.resolvedOn = resolvedOn;
         this.betPlacedOn = betPlacedOn;
         this.stake = stake;
+    }
+
+    public Bet (int id, String details, Date resolvedOn, Date betPlacedOn, int stake){
+        this.id = id;
+        this.details = details;
+        this.resolvedOn = resolvedOn;
+        this.betPlacedOn = betPlacedOn;
+        this.stake = stake;
+    }
+
+    public int getId(){
+        return id;
     }
 
     public String getDetails(){
@@ -40,6 +57,18 @@ public class Bet {
 
     public Integer getStake(){
         return stake;
+    }
+
+    public void setId(int id){
+        this.id = id;
+    }
+
+    public void setDetails(String details){
+        this.details = details;
+    }
+
+    public void setStake(int stake){
+        this.stake = stake;
     }
 
 }
