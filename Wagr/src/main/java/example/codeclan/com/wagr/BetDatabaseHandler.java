@@ -92,11 +92,10 @@ public class BetDatabaseHandler extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
 
-        Date date = new Date(cursor.getString(4));
-        Date date2 = new Date(cursor.getString(5));
-
         if (cursor.moveToFirst()) {
             do {
+                Date date = new Date(cursor.getString(4));
+                Date date2 = new Date(cursor.getString(5));
                 Bet bet = new Bet();
                 bet.setId(Integer.parseInt(cursor.getString(0)));
                 bet.setUser1(cursor.getString(1));
