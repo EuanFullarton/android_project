@@ -17,7 +17,7 @@
         android:layout_alignEnd="@+id/details"
         android:layout_alignTop="@+id/resolvedOn" />
 
-    <TextView
+    <CalendarView
         android:id="@+id/resolvedOn"
         android:inputType="date"
         android:text="02/02/18"
@@ -94,5 +94,6 @@
         android:layout_alignBottom="@+id/details"
         android:layout_alignRight="@+id/user2"
         android:layout_alignEnd="@+id/user2" />
+
 
 </RelativeLayout>

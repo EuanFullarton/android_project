@@ -10,7 +10,6 @@ import android.widget.ListView;
 public class NewUserActivity extends AppCompatActivity {
 
     EditText newUser;
-    ListView userList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
