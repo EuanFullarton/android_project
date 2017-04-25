@@ -42,9 +42,7 @@ public class UserListActivity extends AppCompatActivity {
         }
 
 
-    public void getUser(View listItem) {
-        User user = (User) listItem.getTag();
-        Log.d("Name: ", user.getName());
+    public void viewUserButtonClicked(View button) {
 
         Intent intent = new Intent(this, UserCRUDActivity.class);
         startActivity(intent);

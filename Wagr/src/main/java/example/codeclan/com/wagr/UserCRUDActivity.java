@@ -20,7 +20,7 @@ public class UserCRUDActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_crud);
 
-        user_name = (TextView) findViewById(R.id.name);
+        user_name = (TextView) findViewById(R.id.user_name);
         //TODO link the above with the User object.
     }
 
