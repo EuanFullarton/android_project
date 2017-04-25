@@ -45,5 +45,23 @@ public class BetTest {
         assertEquals(1, bet.getId());
     }
 
+    @Test
+    public void testSetId(){
+        bet.setId(2);
+        assertEquals(2, bet.getId());
+    }
+
+    @Test
+    public void testSetDetails(){
+        bet.setDetails("Sunderland to be relegated");
+        assertEquals("Sunderland to be relegated", bet.getDetails());
+    }
+
+    @Test
+    public void testSetStake(){
+        bet.setStake(50);
+        assertEquals(50, (int)bet.getStake());
+    }
+
 
 }
