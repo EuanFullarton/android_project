@@ -17,7 +17,7 @@ public class BetTest {
 
     @Before
     public void before(){
-        bet = new Bet("Arsenal to win league", new Date(117,9,10), new Date(), 25);
+        bet = new Bet(1, "Arsenal to win league", new Date(117,9,10), new Date(), 25);
     }
 
     @Test
@@ -38,6 +38,11 @@ public class BetTest {
     @Test
     public void hasStake(){
         assertEquals(25, (int)bet.getStake());
+    }
+
+    @Test
+    public void hasId(){
+        assertEquals(1, bet.getId());
     }
 
 
