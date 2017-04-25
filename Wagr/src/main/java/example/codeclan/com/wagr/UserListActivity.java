@@ -42,7 +42,7 @@ public class UserListActivity extends AppCompatActivity {
         }
 
 
-    public void viewUserButtonClicked(View button) {
+    public void userSelected(View listItem) {
 
         Intent intent = new Intent(this, UserCRUDActivity.class);
         startActivity(intent);
@@ -51,6 +51,12 @@ public class UserListActivity extends AppCompatActivity {
     public void addNewUserButtonClicked(View button){
 
         Intent intent = new Intent(this, NewUserActivity.class);
+        startActivity(intent);
+    }
+
+    public void homeButtonClicked(View button) {
+
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 
