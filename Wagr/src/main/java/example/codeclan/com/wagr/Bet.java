@@ -21,7 +21,7 @@ public class Bet {
 
     }
 
-    public Bet (String user1, String user2, String details, Date resolvedOn, Date betPlacedOn, Integer stake){
+    public Bet (String user1, String user2, String details, Date resolvedOn, Date betPlacedOn, int stake){
         this.user1 = user1;
         this.user2 = user2;
         this.details = details;
