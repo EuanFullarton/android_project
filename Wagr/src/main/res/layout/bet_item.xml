@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:onClick="BetClicked">
 
     <TextView
         android:id="@+id/stake"
@@ -12,7 +13,6 @@
         android:textSize="15dp"
         android:textAlignment="center"
         android:textColor="#000dff"
-        android:onClick="getUser"
         android:layout_alignBaseline="@+id/details"
         android:layout_alignBottom="@+id/details"
         android:layout_alignRight="@+id/user2"
@@ -27,7 +27,6 @@
         android:textSize="15dp"
         android:textAlignment="center"
         android:textColor="#000dff"
-        android:onClick="getUser"
         android:layout_alignTop="@+id/betPlacedOn"
         android:layout_alignRight="@+id/stake"
         android:layout_alignEnd="@+id/stake" />
@@ -40,7 +39,6 @@
         android:textSize="15dp"
         android:textAlignment="center"
         android:textColor="#000dff"
-        android:onClick="getUser"
         android:layout_marginRight="45dp"
         android:layout_marginEnd="45dp"
         android:layout_alignBaseline="@+id/user1"
@@ -56,7 +54,6 @@
         android:textSize="15dp"
         android:textAlignment="center"
         android:textColor="#000dff"
-        android:onClick="getUser"
         android:layout_marginTop="32dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
@@ -73,7 +70,6 @@
         android:textSize="10dp"
         android:textAlignment="center"
         android:textColor="#000dff"
-        android:onClick="getUser"
         android:layout_marginTop="97dp"
         android:layout_below="@+id/stake"
         android:layout_alignRight="@+id/user1"
@@ -87,7 +83,6 @@
         android:textSize="15dp"
         android:textAlignment="center"
         android:textColor="#ff0019"
-        android:onClick="getUser"
         android:layout_marginTop="69dp"
         android:layout_below="@+id/user1"
         android:layout_toRightOf="@+id/user1"

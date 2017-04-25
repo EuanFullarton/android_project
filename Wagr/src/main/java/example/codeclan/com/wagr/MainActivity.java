@@ -59,6 +59,12 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, NewBetActivity.class);
         startActivity(intent);
     }
+
+    public void BetClicked(View listView) {
+
+        Intent intent = new Intent(this, BetCRUDActivity.class);
+        startActivity(intent);
+    }
 }
 
 

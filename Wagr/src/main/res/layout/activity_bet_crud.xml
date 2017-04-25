@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/view_stake"
+        android:text="5000"
+        android:inputType="number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:textAlignment="center"
+        android:textColor="#000dff"
+        android:layout_alignBaseline="@+id/view_details"
+        android:layout_alignBottom="@+id/view_details"
+        android:layout_alignLeft="@+id/view_resolvedOn"
+        android:layout_alignStart="@+id/view_resolvedOn" />
+
+    <TextView
+        android:id="@+id/view_betPlacedOn"
+        android:inputType="date"
+        android:text="02/02/17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        android:textAlignment="center"
+        android:textColor="#000dff"
+        android:layout_marginTop="105dp"
+        android:layout_below="@+id/view_details"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="60dp"
+        android:layout_marginStart="60dp" />
+
+    <TextView
+        android:id="@+id/view_resolvedOn"
+        android:inputType="date"
+        android:text="02/02/18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:textAlignment="center"
+        android:textColor="#000dff"
+        android:layout_alignTop="@+id/view_betPlacedOn"
+        android:layout_alignLeft="@+id/view_betResolvedOn_header"
+        android:layout_alignStart="@+id/view_betResolvedOn_header" />
+
+    <TextView
+        android:id="@+id/view_betResolvedOn_header"
+        android:text="Bet deadline:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="8dp"
+        android:layout_marginRight="79dp"
+        android:layout_marginEnd="79dp"
+        android:layout_above="@+id/view_betPlacedOn_header"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/view_betPlacedOn_header"
+        android:text="Bet placed on:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="8dp"
+        android:layout_marginBottom="25dp"
+        android:layout_above="@+id/view_resolvedOn"
+        android:layout_alignLeft="@+id/view_betPlacedOn"
+        android:layout_alignStart="@+id/view_betPlacedOn" />
+
+    <TextView
+        android:id="@+id/view_user2"
+        android:text="User2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:textAlignment="center"
+        android:textColor="#000dff"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/view_stake"
+        android:layout_alignEnd="@+id/view_stake" />
+
+    <TextView
+        android:id="@+id/view_user1"
+        android:text="User1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:textAlignment="center"
+        android:textColor="#000dff"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/view_betPlacedOn_header"
+        android:layout_alignEnd="@+id/view_betPlacedOn_header" />
+
+    <TextView
+        android:id="@+id/view_details"
+        android:text="details"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:textAlignment="center"
+        android:textColor="#ff0019"
+        android:layout_marginTop="78dp"
+        android:layout_below="@+id/view_user1"
+        android:layout_toRightOf="@+id/view_betPlacedOn"
+        android:layout_toEndOf="@+id/view_betPlacedOn" />
+
+    <Button
+        android:id="@+id/delete_bet_button"
+        android:text="Delete bet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="230dp"
+        android:layout_below="@+id/view_resolvedOn"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/resolve_button"
+        android:text="Resolve bet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
