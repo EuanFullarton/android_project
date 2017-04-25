@@ -9,22 +9,16 @@ import java.util.Date;
 
 public class Bet {
 
-    private String category;
     private String details;
     private Date resolvedOn;
     private Date betPlacedOn;
     private int stake;
 
-    public Bet (String category, String details, Date resolvedOn, Date betPlacedOn, Integer stake){
-        this.category = category;
+    public Bet (String details, Date resolvedOn, Date betPlacedOn, Integer stake){
         this.details = details;
         this.resolvedOn = resolvedOn;
         this.betPlacedOn = betPlacedOn;
         this.stake = stake;
-    }
-
-    public String getCategory(){
-        return category;
     }
 
     public String getDetails(){

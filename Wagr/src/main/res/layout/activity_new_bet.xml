@@ -10,17 +10,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="example.codeclan.com.wagr.NewBetActivity">
 
-    <EditText
-        android:id="@+id/input_stake"
-        android:inputType="number"
-        android:hint="Enter bet stake"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/input_bet_category"
-        android:layout_alignBottom="@+id/input_bet_category"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
     <TextView
         android:id="@+id/resolution_date_header"
         android:layout_width="wrap_content"
@@ -55,25 +44,6 @@
         android:layout_above="@+id/submit_new_bet_button"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="22dp"></CalendarView>
-
-    <EditText
-        android:id="@+id/input_bet_category"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Type bet category"
-        android:layout_above="@+id/resolution_date_header"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="55dp" />
-
-    <EditText
-        android:id="@+id/input_bet_details"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Type bet details"
-        android:layout_above="@+id/input_bet_category"
-        android:layout_alignRight="@+id/submit_new_bet_button"
-        android:layout_alignEnd="@+id/submit_new_bet_button" />
 
     <Spinner
         android:id="@+id/select_user_1"
@@ -114,6 +84,27 @@
         android:layout_below="@+id/select_user2_header"
         android:layout_alignLeft="@+id/select_user2_header"
         android:layout_alignStart="@+id/select_user2_header"></Spinner>
+
+    <EditText
+        android:id="@+id/input_stake"
+        android:inputType="number"
+        android:hint="Enter bet stake"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/input_bet_details"
+        android:layout_alignBottom="@+id/input_bet_details"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:id="@+id/input_bet_details"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="Type bet details"
+        android:layout_marginTop="29dp"
+        android:layout_below="@+id/select_user_1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 
 </RelativeLayout>
