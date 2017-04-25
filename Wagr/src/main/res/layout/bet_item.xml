@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:textSize="15dp"
         android:textAlignment="center"
-        android:textColor="#000dff"
+        android:textColor="#a99c10"
         android:layout_alignBaseline="@+id/details"
         android:layout_alignBottom="@+id/details"
         android:layout_alignRight="@+id/user2"
@@ -62,20 +62,6 @@
         android:layout_marginStart="42dp" />
 
     <TextView
-        android:id="@+id/betPlacedOn"
-        android:inputType="date"
-        android:text="02/02/17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="10dp"
-        android:textAlignment="center"
-        android:textColor="#000dff"
-        android:layout_marginTop="97dp"
-        android:layout_below="@+id/stake"
-        android:layout_alignRight="@+id/user1"
-        android:layout_alignEnd="@+id/user1" />
-
-    <TextView
         android:id="@+id/details"
         android:text="details"
         android:layout_width="200dp"
@@ -99,6 +85,20 @@
         android:layout_alignStart="@+id/resolvedOn" />
 
     <TextView
+        android:id="@+id/betPlacedOn"
+        android:inputType="date"
+        android:text="02/02/17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:textAlignment="center"
+        android:textColor="#000dff"
+        android:layout_marginTop="99dp"
+        android:layout_below="@+id/details"
+        android:layout_alignLeft="@+id/user1"
+        android:layout_alignStart="@+id/user1" />
+
+    <TextView
         android:id="@+id/betPlacedOn_header"
         android:text="Bet placed on:"
         android:layout_width="wrap_content"
@@ -106,8 +106,18 @@
         android:textSize="8dp"
         android:layout_alignBaseline="@+id/betResolvedOn_header"
         android:layout_alignBottom="@+id/betResolvedOn_header"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignLeft="@+id/betPlacedOn"
+        android:layout_alignStart="@+id/betPlacedOn" />
 
+    <TextView
+        android:id="@+id/pound_sign"
+        android:textColor="#a99c10"
+        android:text="£"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/stake"
+        android:layout_alignBottom="@+id/stake"
+        android:layout_toLeftOf="@+id/stake"
+        android:layout_toStartOf="@+id/stake" />
 
 </RelativeLayout>
