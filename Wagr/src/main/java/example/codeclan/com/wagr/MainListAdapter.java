@@ -27,6 +27,7 @@ public class MainListAdapter extends ArrayAdapter<Bet> {
                 listItemView = LayoutInflater.from(getContext()).inflate(R.layout.bet_item, parent, false);
             }
 
+
             Bet currentBet = getItem(position);
 
             TextView user1 = (TextView) listItemView.findViewById(R.id.user1);
@@ -39,10 +40,10 @@ public class MainListAdapter extends ArrayAdapter<Bet> {
             details.setText(currentBet.getDetails());
 
             TextView resolvedOn = (TextView) listItemView.findViewById(R.id.resolvedOn);
-            resolvedOn.setText(currentBet.getResolvedOn());
+            resolvedOn.setText(currentBet.getResolvedOn().toString());
 
             TextView betPlacedOn = (TextView) listItemView.findViewById(R.id.betPlacedOn);
-            betPlacedOn.setText(currentBet.getBetPlacedOn());
+            betPlacedOn.setText(currentBet.getBetPlacedOn().toString());
 
             TextView stake = (TextView) listItemView.findViewById(R.id.stake);
             stake.setText(currentBet.getStake());

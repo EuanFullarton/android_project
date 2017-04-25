@@ -24,9 +24,9 @@ public class BetDatabaseHandler extends SQLiteOpenHelper {
     private static final String KEY_USER2 = "user2";
     private static final String DETAILS = "details";
     private static final String RESOLVED_ON = "resolvedOn";
-    private static final Date BET_PLACED_ON = new Date();
+    private static final String BET_PLACED_ON = "betPlacedOn";
     private static final String STAKE = "stake";
-}
+
 
     public BetDatabaseHandler(Context context){
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -57,8 +57,8 @@ public class BetDatabaseHandler extends SQLiteOpenHelper {
         values.put(KEY_USER1, bet.getUser1());
         values.put(KEY_USER2, bet.getUser2());
         values.put(DETAILS, bet.getDetails());
-        values.put(RESOLVED_ON, bet.getResolvedOn());
-        values.put(BET_PLACED_ON, bet.getBetPlacedOn() );
+        values.put(RESOLVED_ON, bet.getResolvedOn().toString());
+        values.put(BET_PLACED_ON, bet.getBetPlacedOn().toString());
         values.put(STAKE, bet.getStake());
 
         db.insert(TABLE_BETS, null, values);
@@ -75,10 +75,12 @@ public class BetDatabaseHandler extends SQLiteOpenHelper {
         if (cursor != null)
             cursor.moveToFirst();
 
+        Date date = new Date(cursor.getString(4));
+        Date date2 = new Date(cursor.getString(5));
+
         Bet bet = new Bet(Integer.parseInt(cursor.getString(0)),
                 cursor.getString(1), cursor.getString(2), cursor.getString(3),
-                // , [RESOLVED_ON] cursor.getString(4), [BET_PLACED_ON] cursor.getString(5),
-                (Integer.parseInt(cursor.getString(6))));
+                date, date2, Integer.parseInt(cursor.getString(6)));
         return bet;
     }
 
@@ -90,6 +92,9 @@ public class BetDatabaseHandler extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
 
+        Date date = new Date(cursor.getString(4));
+        Date date2 = new Date(cursor.getString(5));
+
         if (cursor.moveToFirst()) {
             do {
                 Bet bet = new Bet();
@@ -97,8 +102,8 @@ public class BetDatabaseHandler extends SQLiteOpenHelper {
                 bet.setUser1(cursor.getString(1));
                 bet.setUser2(cursor.getString(2));
                 bet.setDetails(cursor.getString(3));
-                //bet.setResolvedOn(cursor.getString(1));
-                //bet.setBetPlacedOn(cursor.getString(1));
+                bet.setResolvedOn(date);
+                bet.setBetPlacedOn(date2);
                 bet.setStake(Integer.parseInt(cursor.getString(6)));
                 betList.add(bet);
             } while (cursor.moveToNext());
@@ -115,8 +120,8 @@ public class BetDatabaseHandler extends SQLiteOpenHelper {
         values.put(KEY_USER1, bet.getUser1());
         values.put(KEY_USER2, bet.getUser2());
         values.put(DETAILS, bet.getDetails());
-        values.put(RESOLVED_ON, bet.getResolvedOn());
-        values.put(BET_PLACED_ON, bet.getBetPlacedOn());
+        values.put(RESOLVED_ON, bet.getResolvedOn().toString());
+        values.put(BET_PLACED_ON, bet.getBetPlacedOn().toString());
         values.put(STAKE, bet.getStake());
 
         return db.update(TABLE_BETS, values, KEY_ID + " = ?",
@@ -141,4 +146,5 @@ public class BetDatabaseHandler extends SQLiteOpenHelper {
     }
 
 }
+
 

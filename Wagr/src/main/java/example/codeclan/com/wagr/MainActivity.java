@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        UserDatabaseHandler db = new UserDatabaseHandler(this);
+        BetDatabaseHandler db = new BetDatabaseHandler(this);
 
         /**
          * CRUD Operations
@@ -30,9 +30,11 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<Bet> bets = db.getAllBets();
 
         for (Bet bt : bets) {
-            String log = "Id: " + bt.getId() + " ,Details: " + bt.getDetails() + " ,Resolved On: " + bt.getResolvedOn() +
+            String log = "Id: " + bt.getId() + " ,User1: " + bt.getUser1() + " ,User2: " + bt.getUser2() + " ,Details: " + bt.getDetails() + " ,Resolved On: " + bt.getResolvedOn() +
                     " ,Placed On: " + bt.getBetPlacedOn() + " ,Stake: " + bt.getStake();
             // Writing Bets to log
+            Log.d("User1: ", log);
+            Log.d("User2: ", log);
             Log.d("Details: ", log);
             Log.d("Resolved On: ", log);
             Log.d("Placed On: ", log);
@@ -41,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
         MainListAdapter mainListAdapter = new MainListAdapter(this, bets);
 
-        ListView listView = (ListView) findViewById(R.id.main_list);
+        ListView listView = (ListView) findViewById(R.id.open_bet_list);
         listView.setAdapter(mainListAdapter);
     }
 
@@ -67,17 +69,11 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-//        public void getUser(View listItem) {
-//            User user = (User) listItem.getTag();
-//            Log.d("Name: ", user.getName());
+//        public void getBet(View listItem) {
+//            Bet bet = (Bet) listItem.getTag();
+//            Log.d("Details: ", bet.getDetails());
 //
-//            Intent intent = new Intent(this, UserCRUDActivity.class);
-//            startActivity(intent);
-//        }
-//
-//        public void addNewUserButtonClicked(View button){
-//
-//            Intent intent = new Intent(this, NewUserActivity.class);
+//            Intent intent = new Intent(this, BetCRUDActivity.class);
 //            startActivity(intent);
 //        }
 
