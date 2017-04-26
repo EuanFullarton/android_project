@@ -54,8 +54,6 @@ public class BetDatabaseHandler extends SQLiteOpenHelper {
     public void addBet(Bet bet){
         SQLiteDatabase db = this.getWritableDatabase();
 
-        Date placedOn = bet.getBetPlacedOn();
-
         ContentValues values = new ContentValues();
         values.put(KEY_USER1, bet.getUser1());
         values.put(KEY_USER2, bet.getUser2());
