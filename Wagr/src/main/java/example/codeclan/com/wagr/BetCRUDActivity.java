@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 public class BetCRUDActivity extends AppCompatActivity {
 
-    private TextView id;
+    private TextView betId;
     private TextView user1;
     private TextView user2;
     private TextView details;
@@ -29,7 +29,7 @@ public class BetCRUDActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bet_crud);
 
-        id = (TextView) findViewById(R.id.bet_id);
+        betId = (TextView) findViewById(R.id.bet_id);
         user1 = (TextView) findViewById(R.id.view_user1);
         user2 = (TextView) findViewById(R.id.view_user2);
         details = (TextView) findViewById(R.id.view_details);
@@ -52,7 +52,7 @@ public class BetCRUDActivity extends AppCompatActivity {
 
         Bet find_bet = db.getBet(int_Id);
 
-        id.setText(bet_id);
+        betId.setText(bet_id);
         user1.setText(bet_user1);
         user2.setText(bet_user2);
         details.setText(bet_details);
@@ -60,5 +60,28 @@ public class BetCRUDActivity extends AppCompatActivity {
         placedOn.setText(find_bet.getNiceDateFormat());
         stake.setText(bet_stake);
     }
+
+    public void resolveBetButtonClicked(View button){
+
+
+    }
+
+    public void deleteBetButtonClicked(View button){
+
+        betId = (TextView) findViewById(R.id.bet_id);
+
+        String bet_id = betId.getText().toString();
+
+        int int_Id = Integer.parseInt(bet_id);
+
+        BetDatabaseHandler db = new BetDatabaseHandler(this);
+        Bet bet_to_delete = db.getBet(int_Id);
+
+        db.deleteBet(bet_to_delete);
+
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
 
 }

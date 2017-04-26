@@ -60,6 +60,7 @@
     <Button
         android:id="@+id/delete_bet_button"
         android:text="Delete bet"
+        android:onClick="deleteBetButtonClicked"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="230dp"
