@@ -129,6 +129,7 @@
         android:id="@+id/pound_sign"
         android:textColor="#a99c10"
         android:text="£"
+        android:layout_marginLeft="50dp"
         android:textSize="25dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
