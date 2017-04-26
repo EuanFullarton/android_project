@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:textSize="15dp"
         android:textAlignment="center"
-        android:textColor="#0b8924"
+        android:textColor="#0fa712"
         android:layout_alignTop="@+id/betPlacedOn"
         android:layout_alignRight="@+id/stake"
         android:layout_alignEnd="@+id/stake" />
