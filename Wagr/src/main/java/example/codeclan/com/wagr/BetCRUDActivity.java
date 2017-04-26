@@ -4,12 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.TextView;
 
-/**
- * Created by user on 25/04/2017.
- */
 
 public class BetCRUDActivity extends AppCompatActivity {
 
@@ -62,7 +58,23 @@ public class BetCRUDActivity extends AppCompatActivity {
     }
 
     public void resolveBetButtonClicked(View button){
+        betId = (TextView) findViewById(R.id.bet_id);
 
+        String bet_id = betId.getText().toString();
+
+        int int_Id = Integer.parseInt(bet_id);
+
+
+        ResolvedBetDatabaseHandler rdb = new ResolvedBetDatabaseHandler(this);
+
+        BetDatabaseHandler db = new BetDatabaseHandler(this);
+        Bet bet_to_resolve = db.getBet(int_Id);
+
+        rdb.addResolvedBet(bet_to_resolve);
+        db.deleteBet(bet_to_resolve);
+
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
 
     }
 

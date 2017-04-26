@@ -18,21 +18,11 @@ public class MainActivity extends AppCompatActivity {
 
         BetDatabaseHandler db = new BetDatabaseHandler(this);
 
-        /**
-         * CRUD Operations
-         * */
-        // Inserting Bets
-        Log.d("Insert: ", "Inserting ..");
-
-
-        // Reading all contacts
-        Log.d("Reading: ", "Reading all bets..");
         ArrayList<Bet> bets = db.getAllBets();
 
         for (Bet bt : bets) {
             String log = "Id: " + bt.getId() + " ,User1: " + bt.getUser1() + " ,User2: " + bt.getUser2() + " ,Details: " + bt.getDetails() + " ,Resolved On: " + bt.getResolvedOn() +
                     " ,Placed On: " + bt.getBetPlacedOn() + " ,Stake: " + bt.getStake();
-            // Writing Bets to log
             Log.d("Bet: ", log);
         }
 
@@ -86,15 +76,3 @@ public class MainActivity extends AppCompatActivity {
 
     }
 }
-
-
-
-
-//        public void getBet(View listItem) {
-//            Bet bet = (Bet) listItem.getTag();
-//            Log.d("Details: ", bet.getDetails());
-//
-//            Intent intent = new Intent(this, BetCRUDActivity.class);
-//            startActivity(intent);
-//        }
-
