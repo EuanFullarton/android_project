@@ -84,8 +84,7 @@
         android:layout_below="@+id/select_user2_header"
         android:layout_alignLeft="@+id/select_user2_header"
         android:layout_alignStart="@+id/select_user2_header"
-        android:prompt="@string/select_user"
-        android:entries="@array/user_array">
+        android:prompt="@string/select_user">
     </Spinner>
 
     <EditText

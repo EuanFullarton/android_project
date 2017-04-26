@@ -58,4 +58,10 @@ public class ResolvedBetsActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
+
+    public void homeButtonClicked(View button) {
+
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
 }
