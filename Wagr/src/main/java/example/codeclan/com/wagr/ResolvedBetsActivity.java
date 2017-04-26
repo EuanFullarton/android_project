@@ -20,13 +20,6 @@ public class ResolvedBetsActivity extends AppCompatActivity {
 
     ArrayList<Bet> bets = db.getAllResolvedBets();
 
-    for (Bet bt : bets) {
-        String log = "Id: " + bt.getId() + " ,User1: " + bt.getUser1() + " ,User2: " + bt.getUser2() + " ,Details: " + bt.getDetails() + " ,Resolved On: " + bt.getResolvedOn() +
-                " ,Placed On: " + bt.getBetPlacedOn() + " ,Stake: " + bt.getStake();
-        // Writing Bets to log
-        Log.d("Bet: ", log);
-    }
-
     ResolvedBetsAdapter resolvedBetsAdapter = new ResolvedBetsAdapter(this, bets);
 
     ListView listView = (ListView) findViewById(R.id.resolved_bet_list);
