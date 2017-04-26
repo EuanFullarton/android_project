@@ -3,7 +3,17 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:onClick="resolvedBetSelected"
+    android:background="@drawable/wagr_background"
     >
+
+    <TextView
+        android:id="@+id/background_box"
+        android:layout_width="380dp"
+        android:layout_height="300dp"
+        android:background="@color/colorBackground"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp" />
 
     <TextView
         android:id="@+id/view_resolved_stake"
@@ -70,22 +80,10 @@
         android:layout_centerHorizontal="true" />
 
     <TextView
-        android:id="@+id/view_resolved_user2"
-        android:text="User2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="15dp"
-        android:textAlignment="center"
-        android:textColor="#000dff"
-        android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/view_resolved_stake"
-        android:layout_alignEnd="@+id/view_resolved_stake"
-        android:layout_marginTop="17dp" />
-
-    <TextView
         android:id="@+id/view_resolved_pound_sign"
         android:textColor="#a99c10"
         android:text="£"
+        android:textSize="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/view_resolved_stake"
@@ -127,13 +125,26 @@
     <TextView
         android:id="@+id/view_resolved_user1"
         android:text="User1"
+        android:textColor="#383838"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="15dp"
         android:textAlignment="center"
-        android:textColor="#000dff"
         android:layout_below="@+id/resolved_bet_id"
         android:layout_alignLeft="@+id/view_resolved_details"
         android:layout_alignStart="@+id/view_resolved_details" />
+
+    <TextView
+        android:id="@+id/view_resolved_user2"
+        android:text="User2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:textAlignment="center"
+        android:textColor="#383838"
+        android:layout_alignBaseline="@+id/view_resolved_user1"
+        android:layout_alignBottom="@+id/view_resolved_user1"
+        android:layout_alignRight="@+id/view_resolvedOn_date"
+        android:layout_alignEnd="@+id/view_resolvedOn_date" />
 
 </RelativeLayout>

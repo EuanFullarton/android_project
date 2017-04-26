@@ -8,23 +8,34 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/wagr_background"
     tools:context="example.codeclan.com.wagr.NewBetActivity">
 
-    <TextView
-        android:id="@+id/resolution_date_header"
+    <Spinner
+        android:id="@+id/select_user_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Choose bet deadline"
-        android:layout_above="@+id/input_resolution_date"
-        android:layout_centerHorizontal="true" />
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="55dp"
+        android:prompt="@string/select_user"
+        android:background="@color/colorBackground"
+        android:layout_below="@+id/select_user2_header"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+    </Spinner>
 
-    <TextView
-        android:id="@+id/new_bet_header"
+    <Spinner
+        android:id="@+id/select_user_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add new bet"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:spinnerMode="dropdown"
+        android:prompt="@string/select_user"
+        android:background="@color/colorBackground"
+        android:layout_alignTop="@+id/select_user_2"
+        android:layout_toLeftOf="@+id/submit_new_bet_button"
+        android:layout_marginRight="6dp"
+        android:layout_marginEnd="6dp">
+    </Spinner>
 
     <Button
         android:id="@+id/submit_new_bet_button"
@@ -33,80 +44,97 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/resolution_date_header"
-        android:layout_alignStart="@+id/resolution_date_header"
-        android:layout_marginBottom="129dp" />
-
-    <CalendarView
-        android:id="@+id/input_resolution_date"
-        android:layout_width="wrap_content"
-        android:layout_height="300dp"
-        android:layout_above="@+id/submit_new_bet_button"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="22dp"></CalendarView>
-
-    <Spinner
-        android:id="@+id/select_user_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:spinnerMode="dropdown"
-        android:layout_alignTop="@+id/select_user_2"
-        android:layout_alignRight="@+id/select_user1_header"
-        android:layout_alignEnd="@+id/select_user1_header"
-        android:prompt="@string/select_user">
-    </Spinner>
+        android:layout_centerHorizontal="true" />
 
     <TextView
-        android:id="@+id/select_user1_header"
+        android:id="@+id/new_bet_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Select user 1"
-        android:layout_alignBaseline="@+id/select_user2_header"
-        android:layout_alignBottom="@+id/select_user2_header"
-        android:layout_toLeftOf="@+id/input_resolution_date"
-        android:layout_toStartOf="@+id/input_resolution_date" />
+        android:text="Add new bet"
+        android:textSize="15dp"
+        android:textColor="#ffffff"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
 
     <TextView
         android:id="@+id/select_user2_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Select user 2"
-        android:layout_marginTop="26dp"
+        android:text="User 2"
+        android:textSize="15dp"
+        android:textColor="#ffffff"
         android:layout_below="@+id/new_bet_header"
-        android:layout_alignLeft="@+id/input_stake"
-        android:layout_alignStart="@+id/input_stake" />
+        android:layout_toRightOf="@+id/resolution_date_header"
+        android:layout_toEndOf="@+id/resolution_date_header" />
 
-    <Spinner
-        android:id="@+id/select_user_2"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/input_bet_details"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:hint="Type bet details"
+        android:background="@color/colorBackground"
         android:layout_marginTop="26dp"
-        android:layout_below="@+id/select_user2_header"
-        android:layout_alignLeft="@+id/select_user2_header"
-        android:layout_alignStart="@+id/select_user2_header"
-        android:prompt="@string/select_user">
-    </Spinner>
+        android:layout_below="@+id/select_user_2"
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:id="@+id/input_stake"
         android:inputType="number"
+        android:textAlignment="center"
         android:hint="Enter bet stake"
+        android:textSize="15dp"
+        android:background="@color/colorBackground"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/input_bet_details"
-        android:layout_alignBottom="@+id/input_bet_details"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_below="@+id/input_bet_details"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp" />
 
-    <EditText
-        android:id="@+id/input_bet_details"
-        android:layout_width="250dp"
+    <CalendarView
+        android:id="@+id/input_resolution_date"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:background="@color/colorBackground"
+        android:layout_above="@+id/submit_new_bet_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"></CalendarView>
+
+    <TextView
+        android:id="@+id/resolution_date_header"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Type bet details"
-        android:layout_marginTop="29dp"
-        android:layout_below="@+id/select_user_1"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:text="Choose bet deadline"
+        android:textSize="15dp"
+        android:textColor="#ffffff"
+        android:layout_above="@+id/input_resolution_date"
+        android:layout_toRightOf="@+id/select_user_1"
+        android:layout_toEndOf="@+id/select_user_1"
+        android:layout_marginBottom="14dp" />
 
+    <TextView
+        android:id="@+id/select_user1_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User 1"
+        android:textSize="15dp"
+        android:textColor="#ffffff"
+        android:layout_marginRight="15dp"
+        android:layout_below="@+id/new_bet_header"
+        android:layout_alignRight="@+id/select_user_1"
+        android:layout_alignEnd="@+id/select_user_1" />
+
+    <TextView
+        android:id="@+id/pound_sign"
+        android:textColor="#a99c10"
+        android:text="£"
+        android:textSize="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/input_stake"
+        android:layout_alignBottom="@+id/input_stake"
+        android:layout_alignLeft="@+id/select_user_1"
+        android:layout_alignStart="@+id/select_user_1" />
 
 </RelativeLayout>

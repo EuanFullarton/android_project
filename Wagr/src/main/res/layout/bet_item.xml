@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBackground"
     android:onClick="betSelected">
 
     <TextView
@@ -38,7 +39,7 @@
         android:layout_height="wrap_content"
         android:textSize="15dp"
         android:textAlignment="center"
-        android:textColor="#000dff"
+        android:textColor="#383838"
         android:layout_marginRight="45dp"
         android:layout_marginEnd="45dp"
         android:layout_alignBaseline="@+id/user1"
@@ -53,7 +54,7 @@
         android:layout_height="wrap_content"
         android:textSize="15dp"
         android:textAlignment="center"
-        android:textColor="#000dff"
+        android:textColor="#383838"
         android:layout_marginTop="32dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
@@ -113,6 +114,7 @@
         android:id="@+id/pound_sign"
         android:textColor="#a99c10"
         android:text="£"
+        android:textSize="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/stake"

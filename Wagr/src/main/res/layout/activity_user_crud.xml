@@ -1,28 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/wagr_background"
+    >
 
-    <Button
-        android:id="@+id/edit_user_button"
-        android:text="Update user name"
-        android:onClick="editUserButtonClicked"
+    <TextView
+        android:id="@+id/user_id"
+        android:visibility="invisible"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/delete_user_button"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="50dp" />
-
-    <EditText
-        android:id="@+id/user_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Test"
-        android:textSize="40dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/edit_user_button"
-        android:layout_alignStart="@+id/edit_user_button"
-        android:layout_marginTop="49dp" />
+        android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/delete_user_button"
@@ -30,14 +17,30 @@
         android:onClick="deleteUserButtonClicked"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="228dp"
-        android:layout_below="@+id/user_name"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="135dp" />
+
+    <Button
+        android:id="@+id/edit_user_button"
+        android:text="Update user name"
+        android:onClick="editUserButtonClicked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="97dp"
+        android:layout_alignBottom="@+id/delete_user_button"
         android:layout_centerHorizontal="true" />
 
-    <TextView
-        android:id="@+id/user_id"
-        android:visibility="invisible"
+    <EditText
+        android:id="@+id/user_name"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="Test"
+        android:background="@color/colorBackground"
+        android:textAlignment="center"
+        android:textSize="40dp"
+        android:layout_marginTop="72dp"
+        android:layout_below="@+id/user_id"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
