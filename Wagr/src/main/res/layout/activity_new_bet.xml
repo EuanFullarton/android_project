@@ -102,18 +102,6 @@
         android:layout_marginBottom="10dp"></CalendarView>
 
     <TextView
-        android:id="@+id/resolution_date_header"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Choose bet deadline"
-        android:textSize="15dp"
-        android:textColor="#ffffff"
-        android:layout_above="@+id/input_resolution_date"
-        android:layout_toRightOf="@+id/select_user_1"
-        android:layout_toEndOf="@+id/select_user_1"
-        android:layout_marginBottom="14dp" />
-
-    <TextView
         android:id="@+id/select_user1_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -137,5 +125,16 @@
         android:layout_alignBottom="@+id/input_stake"
         android:layout_alignLeft="@+id/select_user_1"
         android:layout_alignStart="@+id/select_user_1" />
+
+    <TextView
+        android:id="@+id/resolution_date_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose bet deadline"
+        android:textSize="15dp"
+        android:textColor="#ffffff"
+        android:layout_above="@+id/input_resolution_date"
+        android:layout_alignLeft="@+id/submit_new_bet_button"
+        android:layout_alignStart="@+id/submit_new_bet_button" />
 
 </RelativeLayout>

@@ -42,8 +42,6 @@ public class BetCRUDActivity extends AppCompatActivity {
         String bet_user1 = extras.getString("bet_user1");
         String bet_user2 = extras.getString("bet_user2");
         String bet_details = extras.getString("bet_details");
-        String bet_resolved_on = extras.getString("bet_resolved_on");
-        String bet_placed_on = extras.getString("bet_placed_on");
         String bet_stake = extras.getString("bet_stake");
 
         BetDatabaseHandler db = new BetDatabaseHandler(this);

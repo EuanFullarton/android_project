@@ -58,7 +58,7 @@
         android:id="@+id/open_bet_list"
         android:textSize="30sp"
         android:layout_width="wrap_content"
-        android:layout_height="450dp"
+        android:layout_height="400dp"
         android:layout_below="@+id/open_bet_header"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
