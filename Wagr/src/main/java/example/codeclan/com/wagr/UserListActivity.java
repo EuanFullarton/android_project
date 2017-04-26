@@ -45,10 +45,17 @@ public class UserListActivity extends AppCompatActivity {
     public void userSelected(View listItem) {
 
         User user = (User) listItem.getTag();
+
+        String id_string = Integer.toString(user.getId());
+
+        //id passing as null?
+
         Log.d("Selected user: ", user.getName());
+        Log.d("Selected id: ", id_string);
 
         Intent intent = new Intent(this, UserCRUDActivity.class);
         intent.putExtra("user_name", user.getName());
+        intent.putExtra("user_id", id_string);
         startActivity(intent);
     }
 
