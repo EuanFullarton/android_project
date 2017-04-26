@@ -18,22 +18,7 @@ public class UserListActivity extends AppCompatActivity {
 
             UserDatabaseHandler db = new UserDatabaseHandler(this);
 
-            /**
-             * CRUD Operations
-             * */
-            // Inserting Users
-            Log.d("Insert: ", "Inserting ..");
-
-
-            // Reading all Users
-            Log.d("Reading: ", "Reading all users..");
             ArrayList<User> users = db.getAllUsers();
-
-            for (User ur : users) {
-                String log = "Id: "+ur.getId()+" ,Name: " + ur.getName();
-                // Writing Users to log
-                Log.d("Name: ", log);
-            }
 
             UserListAdapter userListAdapter = new UserListAdapter(this, users);
 
