@@ -55,8 +55,8 @@ public class ViewResolvedBetActivity extends AppCompatActivity {
             user1.setText(bet_user1);
             user2.setText(bet_user2);
             details.setText(bet_details);
-            resolvedOn.setText(find_bet.getNiceDateFormat());
-            placedOn.setText(find_bet.getNiceDateFormat());
+            resolvedOn.setText(find_bet.getNiceDateFormat(find_bet.getResolvedOn()));
+            placedOn.setText(find_bet.getNiceDateFormat(find_bet.getBetPlacedOn()));
             stake.setText(bet_stake);
         }
 

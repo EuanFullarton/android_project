@@ -115,22 +115,6 @@ public class BetDatabaseHandler extends SQLiteOpenHelper {
         return betList;
     }
 
-//
-//    public int updateBet(Bet bet){
-//        SQLiteDatabase db = this.getWritableDatabase();
-//
-//        ContentValues values = new ContentValues();
-//        values.put(KEY_USER1, bet.getUser1());
-//        values.put(KEY_USER2, bet.getUser2());
-//        values.put(DETAILS, bet.getDetails());
-//        values.put(RESOLVED_ON, bet.getResolvedOn().toString());
-//        values.put(BET_PLACED_ON, bet.getBetPlacedOn().toString());
-//        values.put(STAKE, bet.getStake());
-//
-//        return db.update(TABLE_BETS, values, KEY_ID + " = ?",
-//                new String[] { String.valueOf(bet.getId()) });
-//    }
-
 
     public void deleteBet(Bet bet){
         SQLiteDatabase db = this.getWritableDatabase();
@@ -139,14 +123,6 @@ public class BetDatabaseHandler extends SQLiteOpenHelper {
         db.close();
     }
 
-
-//    public void deleteAllBets(){
-//        ArrayList<Bet> betList = new ArrayList<Bet>();
-//        String deleteQuery = "DELETE FROM " + TABLE_BETS;
-//        SQLiteDatabase db = this.getWritableDatabase();
-//        db.execSQL(deleteQuery);
-//        db.close();
-//    }
 
 }
 

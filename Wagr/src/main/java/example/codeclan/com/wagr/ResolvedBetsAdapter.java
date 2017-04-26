@@ -43,7 +43,7 @@ public class ResolvedBetsAdapter extends ArrayAdapter<Bet> {
         resolvedOn.setText(currentBet.getNiceDateFormat(currentBet.getResolvedOn()));
 
         TextView betPlacedOn = (TextView) listItemView.findViewById(R.id.betPlacedOn);
-        betPlacedOn.setText(currentBet.getNiceDateFormat());
+        betPlacedOn.setText(currentBet.getNiceDateFormat(currentBet.getBetPlacedOn()));
 
         TextView stake = (TextView) listItemView.findViewById(R.id.stake);
         stake.setText(currentBet.getStake().toString());
