@@ -5,7 +5,7 @@
 
     <Button
         android:id="@+id/edit_user_button"
-        android:text="Edit User"
+        android:text="Update user name"
         android:onClick="editUserButtonClicked"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

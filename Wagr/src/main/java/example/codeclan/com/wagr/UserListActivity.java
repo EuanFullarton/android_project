@@ -48,8 +48,6 @@ public class UserListActivity extends AppCompatActivity {
 
         String id_string = Integer.toString(user.getId());
 
-        //id passing as null?
-
         Log.d("Selected user: ", user.getName());
         Log.d("Selected id: ", id_string);
 

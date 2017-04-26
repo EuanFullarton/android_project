@@ -60,10 +60,30 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void BetClicked(View listView) {
+    public void betSelected(View listItem) {
+
+        Bet bet = (Bet) listItem.getTag();
+
+        String id_string = Integer.toString(bet.getId());
+
+        Log.d("Selected id: ", id_string);
+        Log.d("Selected user1: ", bet.getUser1());
+        Log.d("Selected user2: ", bet.getUser2());
+        Log.d("Selected bet details: ", bet.getDetails());
+        Log.d("Selected resolvedOn: ", bet.getResolvedOn().toString());
+        Log.d("Selected placedOn: ", bet.getBetPlacedOn().toString());
+        Log.d("Selected stake: ", bet.getStake().toString());
 
         Intent intent = new Intent(this, BetCRUDActivity.class);
+        intent.putExtra("bet_id", id_string);
+        intent.putExtra("bet_user1", bet.getUser1());
+        intent.putExtra("bet_user2", bet.getUser2());
+        intent.putExtra("bet_details", bet.getDetails());
+        intent.putExtra("bet_resolved_on", bet.getResolvedOn().toString());
+        intent.putExtra("bet_placed_on", bet.getBetPlacedOn().toString());
+        intent.putExtra("bet_stake", bet.getStake().toString());
         startActivity(intent);
+
     }
 }
 
