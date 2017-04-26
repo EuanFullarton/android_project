@@ -12,16 +12,19 @@ import android.widget.TextView;
 
 public class UserCRUDActivity extends AppCompatActivity {
 
-    private TextView user_name;
-
+    private TextView userName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_crud);
 
-        user_name = (TextView) findViewById(R.id.user_name);
-        //TODO link the above with the User object.
+        userName = (TextView) findViewById(R.id.user_name);
+
+        Intent intent = getIntent();
+        Bundle extras = intent.getExtras();
+        String name = extras.getString("user_name");
+        userName.setText(name);
     }
 
 }
