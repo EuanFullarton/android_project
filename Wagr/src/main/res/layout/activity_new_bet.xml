@@ -53,8 +53,7 @@
         android:layout_alignTop="@+id/select_user_2"
         android:layout_alignRight="@+id/select_user1_header"
         android:layout_alignEnd="@+id/select_user1_header"
-        android:prompt="@string/select_user"
-        android:entries="@array/user_array">
+        android:prompt="@string/select_user">
     </Spinner>
 
     <TextView

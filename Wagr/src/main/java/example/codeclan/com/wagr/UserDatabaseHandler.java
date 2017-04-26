@@ -103,12 +103,12 @@ public class UserDatabaseHandler extends SQLiteOpenHelper {
         db.close();
     }
 
-    public void deleteAllUsers(){
-        ArrayList<User> userList = new ArrayList<User>();
-        String deleteQuery = "DELETE FROM " + TABLE_USERS;
-        SQLiteDatabase db = this.getWritableDatabase();
-        db.execSQL(deleteQuery);
-        db.close();
-    }
+//    public void deleteAllUsers(){
+//        ArrayList<User> userList = new ArrayList<User>();
+//        String deleteQuery = "DELETE FROM " + TABLE_USERS;
+//        SQLiteDatabase db = this.getWritableDatabase();
+//        db.execSQL(deleteQuery);
+//        db.close();
+//    }
 
 }

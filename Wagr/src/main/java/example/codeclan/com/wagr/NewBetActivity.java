@@ -35,17 +35,37 @@ public class NewBetActivity extends AppCompatActivity {
         newResolvedOn = (CalendarView) findViewById(R.id.input_resolution_date);
         currentSelectedDate = 0;
 
+        newUser1 = (Spinner)findViewById(R.id.select_user_1);
+        newUser2 = (Spinner)findViewById(R.id.select_user_2);
+
+
+        UserDatabaseHandler userDatabaseHandler = new UserDatabaseHandler(this);
+
+        ArrayList<User> users = userDatabaseHandler.getAllUsers();
+
+        ArrayList<String> names = new ArrayList<>();
+
+        for(User user : users) {
+            names.add(user.getName());
+        }
+
+        ArrayAdapter<String> spinnerArrayAdaptor = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, names);
+        spinnerArrayAdaptor.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        newUser1.setAdapter(spinnerArrayAdaptor);
+        newUser2.setAdapter(spinnerArrayAdaptor);
+
+
+
         newResolvedOn.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(CalendarView view, int year, int month, int dayOfMonth) {
-                currentSelectedDate = new Date(year, month, dayOfMonth).getTime();
+                currentSelectedDate = new Date(year-1900, month, dayOfMonth).getTime();
             }
         });
     }
 
     public void submitNewBetButtonClicked(View button){
-        newUser1 = (Spinner)findViewById(R.id.select_user_1);
-        newUser2 = (Spinner)findViewById(R.id.select_user_2);
+
         newDetails = (EditText)findViewById(R.id.input_bet_details);
 
         newStake = (EditText)findViewById(R.id.input_stake);
@@ -55,6 +75,8 @@ public class NewBetActivity extends AppCompatActivity {
         String details = newDetails.getText().toString();
         Date resolvedOn = new Date(currentSelectedDate);
         Date betPlacedOn = new Date();
+
+
 
         int stake = Integer.parseInt(newStake.getText().toString());
 

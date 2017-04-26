@@ -15,6 +15,8 @@ public class NewUserActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_user);
+
+
     }
 
     public void submitNewUserButtonClicked(View button){
@@ -25,6 +27,7 @@ public class NewUserActivity extends AppCompatActivity {
 
         UserDatabaseHandler db = new UserDatabaseHandler(this);
         db.addUser(new_user);
+
 
         Intent intent = new Intent(this, UserListActivity.class);
         startActivity(intent);

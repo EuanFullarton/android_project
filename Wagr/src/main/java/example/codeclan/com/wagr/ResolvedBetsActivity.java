@@ -47,7 +47,7 @@ public class ResolvedBetsActivity extends AppCompatActivity {
         Log.d("Selected placedOn: ", bet.getBetPlacedOn().toString());
         Log.d("Selected stake: ", bet.getStake().toString());
 
-        Intent intent = new Intent(this, BetCRUDActivity.class);
+        Intent intent = new Intent(this, ViewResolvedBetActivity.class);
         intent.putExtra("bet_id", id_string);
         intent.putExtra("bet_user1", bet.getUser1());
         intent.putExtra("bet_user2", bet.getUser2());
