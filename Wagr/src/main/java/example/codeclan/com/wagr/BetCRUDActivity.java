@@ -1,10 +1,13 @@
 package example.codeclan.com.wagr;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
+
+import java.util.Date;
 
 
 public class BetCRUDActivity extends AppCompatActivity {
@@ -55,6 +58,12 @@ public class BetCRUDActivity extends AppCompatActivity {
         resolvedOn.setText(find_bet.getNiceDateFormat(find_bet.getResolvedOn()));
         placedOn.setText(find_bet.getNiceDateFormat(find_bet.getBetPlacedOn()));
         stake.setText(bet_stake);
+
+        Date today = new Date();
+        resolvedOn.setTextColor(Color.GREEN);
+        if (find_bet.getResolvedOn().compareTo(today) <= 0) {
+            resolvedOn.setTextColor(Color.RED);
+        }
     }
 
     public void resolveBetButtonClicked(View button){

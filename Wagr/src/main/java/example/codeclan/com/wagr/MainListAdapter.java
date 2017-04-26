@@ -1,6 +1,7 @@
 package example.codeclan.com.wagr;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,6 +47,11 @@ public class MainListAdapter extends ArrayAdapter<Bet> {
             TextView stake = (TextView) listItemView.findViewById(R.id.stake);
             stake.setText(currentBet.getStake().toString());
 
+            Date today = new Date();
+            resolvedOn.setTextColor(Color.GREEN);
+            if (currentBet.getResolvedOn().compareTo(today) <= 0) {
+                resolvedOn.setTextColor(Color.RED);
+            }
 
             listItemView.setTag(currentBet);
 
